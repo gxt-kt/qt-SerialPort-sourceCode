@@ -1,0 +1,975 @@
+[2022-02-15 04:04:07]	link failed !, exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x01a1e] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+Error: L6218E: Undefined symbol ledBlink (referred from main.o).
+Error: L6218E: Undefined symbol cppTestInit (referred from main.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 2 error messages.
+
+
+[2022-02-15 04:04:28]	[done]
+	build successfully !
+
+[2022-02-15 04:04:42]	[done]
+	build successfully !
+
+[2022-02-15 04:06:24]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\Send.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/Send.cpp:38:5: error: use of undeclared identifier 'CDC_Transmit_FS'; did you mean 'CDC_Transmit_HS'?
+    CDC_Transmit_FS((uint8_t*)str,(*cnt)); // <B5><F7><D3><C3> USB CDC<BA><AF><CA><FD><B7><A2><CB><CD><CA><FD><BE><DD>
+    ^~~~~~~~~~~~~~~
+    CDC_Transmit_HS
+./USB_DEVICE/App\usbd_cdc_if.h:108:9: note: 'CDC_Transmit_HS' declared here
+uint8_t CDC_Transmit_HS(uint8_t* Buf, uint16_t Len);
+        ^
+1 error generated.
+
+[2022-02-15 04:19:36]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\Send.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/Send.cpp:38:5: error: use of undeclared identifier 'CDC_Transmit_FS'; did you mean 'CDC_Transmit_HS'?
+    CDC_Transmit_FS((uint8_t*)str,(*cnt)); // <B5><F7><D3><C3> USB CDC<BA><AF><CA><FD><B7><A2><CB><CD><CA><FD><BE><DD>
+    ^~~~~~~~~~~~~~~
+    CDC_Transmit_HS
+./USB_DEVICE/App\usbd_cdc_if.c:280:9: note: 'CDC_Transmit_HS' declared here
+uint8_t CDC_Transmit_HS(uint8_t* Buf, uint16_t Len)
+        ^
+1 error generated.
+
+[2022-02-15 04:19:46]	link failed !, exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x01a1e] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+Error: L6123E: Linking globals named 'UserRxBufferHS': symbol multiply defined!
+Error: L6134E: LTO module created from LLVM bitcode in Send.o(.llvmbc) could not be added to the codegen.
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 2 error messages.
+
+
+[2022-02-15 04:20:41]	link failed !, exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x01a1e] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+Error: L6123E: Linking globals named 'UserRxBufferHS': symbol multiply defined!
+Error: L6134E: LTO module created from LLVM bitcode in Send.o(.llvmbc) could not be added to the codegen.
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 2 error messages.
+
+
+[2022-02-15 04:21:39]	[done]
+	build successfully !
+
+[2022-02-15 04:22:57]	[done]
+	build successfully !
+
+[2022-02-15 04:23:03]	[done]
+	build successfully !
+
+[2022-02-15 04:26:42]	[done]
+	build successfully !
+
+[2022-02-15 04:28:07]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\USB_DEVICE\Target\usbd_conf.c", exit code: 1
+  at unify_builder.Program.compileByMulThread (System.Int32 thrNum, unify_builder.CmdGenerator+CmdInfo[] cmds, System.Collections.Generic.List`1[T] errLogs) [0x00104] in <67d11e1b30504dd6babd321425698ba1>:0 
+  at unify_builder.Program.Main (System.String[] args) [0x018f4] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./USB_DEVICE/Target/usbd_conf.c:376:24: error: use of undeclared identifier 'hpcd_USB_OTG_HS'; did you mean 'hpcd_USB_OTG_FS'?
+  HAL_PCDEx_SetRxFiFo(&hpcd_USB_OTG_HS, 0x200);
+                       ^~~~~~~~~~~~~~~
+                       hpcd_USB_OTG_FS
+./USB_DEVICE/Target/usbd_conf.c:41:19: note: 'hpcd_USB_OTG_FS' declared here
+PCD_HandleTypeDef hpcd_USB_OTG_FS;
+                  ^
+./USB_DEVICE/Target/usbd_conf.c:377:24: error: use of undeclared identifier 'hpcd_USB_OTG_HS'; did you mean 'hpcd_USB_OTG_FS'?
+  HAL_PCDEx_SetTxFiFo(&hpcd_USB_OTG_HS, 0, 0x80);
+                       ^~~~~~~~~~~~~~~
+                       hpcd_USB_OTG_FS
+./USB_DEVICE/Target/usbd_conf.c:41:19: note: 'hpcd_USB_OTG_FS' declared here
+PCD_HandleTypeDef hpcd_USB_OTG_FS;
+                  ^
+./USB_DEVICE/Target/usbd_conf.c:378:24: error: use of undeclared identifier 'hpcd_USB_OTG_HS'; did you mean 'hpcd_USB_OTG_FS'?
+  HAL_PCDEx_SetTxFiFo(&hpcd_USB_OTG_HS, 1, 0x174);
+                       ^~~~~~~~~~~~~~~
+                       hpcd_USB_OTG_FS
+./USB_DEVICE/Target/usbd_conf.c:41:19: note: 'hpcd_USB_OTG_FS' declared here
+PCD_HandleTypeDef hpcd_USB_OTG_FS;
+                  ^
+3 errors generated.
+
+[2022-02-15 04:33:24]	[done]
+	build successfully !
+
+[2022-02-15 04:34:10]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/cpptest.cpp:22:3: error: no matching function for call to 'CDC_Transmit_FS'
+  CDC_Transmit_FS("123",3);
+  ^~~~~~~~~~~~~~~
+./USB_DEVICE/App\usbd_cdc_if.h:108:9: note: candidate function not viable: no known conversion from 'const char [4]' to 'std::uint8_t *' (aka 'unsigned char *') for 1st argument
+uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len);
+        ^
+1 error generated.
+
+[2022-02-15 04:34:28]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/cpptest.cpp:22:3: error: no matching function for call to 'CDC_Transmit_FS'
+  CDC_Transmit_FS((char*)"123",3);
+  ^~~~~~~~~~~~~~~
+./USB_DEVICE/App\usbd_cdc_if.h:108:9: note: candidate function not viable: no known conversion from 'char *' to 'std::uint8_t *' (aka 'unsigned char *') for 1st argument
+uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len);
+        ^
+1 error generated.
+
+[2022-02-15 04:34:46]	[done]
+	build successfully !
+
+[2022-02-15 04:35:31]	[done]
+	build successfully !
+
+[2022-02-15 04:36:09]	[done]
+	build successfully !
+
+[2022-02-15 04:37:32]	[done]
+	build successfully !
+
+[2022-02-15 04:38:28]	[done]
+	build successfully !
+
+[2022-02-15 04:39:17]	[done]
+	build successfully !
+
+[2022-02-15 04:40:01]	[done]
+	build successfully !
+
+[2022-02-15 04:40:44]	[done]
+	build successfully !
+
+[2022-02-15 16:59:55]	[done]
+	build successfully !
+
+[2022-02-16 01:10:53]	[done]
+	build successfully !
+
+[2022-02-16 01:11:11]	[done]
+	build successfully !
+
+[2022-02-16 01:11:23]	[done]
+	build successfully !
+
+[2022-02-16 01:11:34]	[done]
+	build successfully !
+
+[2022-02-16 01:14:40]	[done]
+	build successfully !
+
+[2022-02-16 01:17:05]	[done]
+	build successfully !
+
+[2022-02-16 01:34:22]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\gxt_kt_gpio.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/gxt_kt_gpio.cpp:4:5: error: no matching function for call to 'HAL_GPIO_WritePin'
+    HAL_GPIO_WritePin(GPIOx,GPIO_Pin,1);
+    ^~~~~~~~~~~~~~~~~
+./Drivers/STM32H7xx_HAL_Driver/Inc\stm32h7xx_hal_gpio.h:266:6: note: candidate function not viable: no known conversion from 'int' to 'GPIO_PinState' for 3rd argument
+void HAL_GPIO_WritePin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+     ^
+1 error generated.
+
+[2022-02-16 01:34:50]	[done]
+	build successfully !
+
+[2022-02-16 01:57:03]	[done]
+	build successfully !
+
+[2022-02-16 01:58:48]	[done]
+	build successfully !
+
+[2022-02-16 01:59:24]	[done]
+	build successfully !
+
+[2022-02-16 01:59:53]	[done]
+	build successfully !
+
+[2022-02-16 02:00:31]	[done]
+	build successfully !
+
+[2022-02-16 02:00:46]	[done]
+	build successfully !
+
+[2022-02-16 02:05:25]	[done]
+	build successfully !
+
+[2022-02-16 02:06:35]	[done]
+	build successfully !
+
+[2022-02-16 02:07:57]	[done]
+	build successfully !
+
+[2022-02-16 16:07:56]	[done]
+	build successfully !
+
+[2022-02-16 16:17:37]	[done]
+	build successfully !
+
+[2022-02-16 16:19:00]	[done]
+	build successfully !
+
+[2022-02-16 18:53:52]	[done]
+	build successfully !
+
+[2022-02-16 19:03:04]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/cpptest.cpp:88:3: error: no matching function for call to 'Ring_Buffer_Write_String'
+  Ring_Buffer_Write_String(&RB,"test",4);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+./Core/Inc\ringfifo.h:33:9: note: candidate function not viable: no known conversion from 'const char [5]' to 'std::uint8_t *' (aka 'unsigned char *') for 2nd argument
+uint8_t Ring_Buffer_Write_String(ring_buffer *ring_buffer_handle, uint8_t *input_addr, uint32_t write_lenght);//<CF><U+BBEB3><E5><C7><F8><C0><EF>дָ<B6><A8><B3><A4><B6><C8><CA><FD><BE><DD>
+        ^
+1 error generated.
+
+[2022-02-16 19:03:53]	[done]
+	build successfully !
+
+[2022-02-16 19:07:48]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/cpptest.cpp:59:15: error: no matching function for call to 'Ring_Buffer_Read_String'
+    gDebug()<<Ring_Buffer_Read_String(RB,Ring_Buffer_Get_Lenght(RB));
+              ^~~~~~~~~~~~~~~~~~~~~~~
+./Core/Inc\ringfifo.h:34:9: note: candidate function not viable: requires 3 arguments, but 2 were provided
+uint8_t Ring_Buffer_Read_String(ring_buffer *ring_buffer_handle, uint8_t *output_addr, uint32_t read_lenght);//<B4>ӻ<BA><B3><E5><C7><F8><B6><C1>ȡָ<B6><A8><B3><A4><B6><C8><CA><FD><BE><DD>
+        ^
+1 error generated.
+
+[2022-02-16 19:09:41]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/cpptest.cpp:61:13: error: invalid operands to binary expression ('gxtCout' and 'std::uint8_t [256]')
+    gDebug()<<str<<endl;
+    ~~~~~~~~^ ~~~
+./Core/Inc\gDebug.h:22:14: note: candidate function not viable: no known conversion from 'std::uint8_t [256]' to 'gxtEndl &' for 1st argument
+    gxtCout &operator<<(gxtEndl &gendl)
+             ^
+./Core/Inc\gDebug.h:27:14: note: candidate function not viable: no known conversion from 'std::uint8_t [256]' to 'char' for 1st argument
+    gxtCout &operator<<(char c)
+             ^
+./Core/Inc\gDebug.h:32:14: note: candidate function not viable: no known conversion from 'std::uint8_t [256]' to 'const char *' for 1st argument
+    gxtCout &operator<<(const char *str)
+             ^
+./Core/Inc\gDebug.h:37:14: note: candidate function not viable: no known conversion from 'std::uint8_t [256]' to 'short' for 1st argument
+    gxtCout &operator<<(short number)
+             ^
+./Core/Inc\gDebug.h:42:14: note: candidate function not viable: no known conversion from 'std::uint8_t [256]' to 'int' for 1st argument
+    gxtCout &operator<<(int number)
+             ^
+./Core/Inc\gDebug.h:47:14: note: candidate function not viable: no known conversion from 'std::uint8_t [256]' to 'long' for 1st argument
+    gxtCout &operator<<(long number)
+             ^
+./Core/Inc\gDebug.h:52:14: note: candidate function not viable: no known conversion from 'std::uint8_t [256]' to 'float' for 1st argument
+    gxtCout &operator<<(float number)
+             ^
+1 error generated.
+
+[2022-02-16 19:11:50]	[done]
+	build successfully !
+
+[2022-02-16 19:16:28]	[done]
+	build successfully !
+
+[2022-02-16 19:17:46]	[done]
+	build successfully !
+
+[2022-02-16 19:19:07]	[done]
+	build successfully !
+
+[2022-02-16 19:20:38]	[done]
+	build successfully !
+
+[2022-02-16 19:21:39]	[done]
+	build successfully !
+
+[2022-02-16 19:23:30]	[done]
+	build successfully !
+
+[2022-02-16 19:43:41]	[done]
+	build successfully !
+
+[2022-02-16 19:56:08]	[done]
+	build successfully !
+
+[2022-02-16 19:56:40]	[done]
+	build successfully !
+
+[2022-02-16 22:12:46]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/cpptest.cpp:11:1: error: unknown type name 'ring_buffer'
+ring_buffer *RB;
+^
+1 error generated.
+
+[2022-02-16 22:13:43]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\gDebug.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/gDebug.cpp:7:8: error: unknown type name 'ring_buffer'
+extern ring_buffer*RB;
+       ^
+1 error generated.
+
+[2022-02-16 22:14:04]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\gDebug.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/gDebug.cpp:28:3: error: use of undeclared identifier 'Ring_Buffer_Write_String'; did you mean 'Ring_Fifo_Write_String'?
+  Ring_Buffer_Write_String(RB,(uint8_t*)str,num);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+  Ring_Fifo_Write_String
+./Core/Inc\ringfifo.h:33:9: note: 'Ring_Fifo_Write_String' declared here
+uint8_t Ring_Fifo_Write_String(ring_Fifo *ring_Fifo_handle, uint8_t *input_addr, uint32_t write_lenght);//<CF><U+BBEB3><E5><C7><F8><C0><EF>дָ<B6><A8><B3><A4><B6><C8><CA><FD><BE><DD>
+        ^
+1 error generated.
+
+[2022-02-16 22:14:27]	[done]
+	build successfully !
+
+[2022-02-16 22:15:31]	[done]
+	build successfully !
+
+[2022-02-16 22:16:30]	[done]
+	build successfully !
+
+[2022-02-16 22:21:43]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+In file included from ./Core/Src/cpptest.cpp:4:
+./Core/Inc\ringfifo.h:35:9: error: use of undeclared identifier 'Ring_Fifo_Init'
+        Ring_Fifo_Init(ring_Fifo_handle,bufAdd,size);
+        ^
+1 error generated.
+
+[2022-02-16 22:21:59]	[done]
+	build successfully !
+
+[2022-02-16 22:25:19]	[done]
+	build successfully !
+
+[2022-02-16 22:32:39]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+In file included from ./Core/Src/cpptest.cpp:4:
+./Core/Inc\ringfifo.h:50:16: error: constructor cannot have a return type
+    ring_Fifo* gRingFifo(uint32_t size){
+    ~~~~~~~~~  ^~~~~~~~~
+./Core/Src/cpptest.cpp:11:15: error: use of undeclared identifier 'RingFifo'; did you mean 'gRingFifo'?
+ring_Fifo *RB=RingFifo();
+              ^
+./Core/Inc\ringfifo.h:43:7: note: 'gRingFifo' declared here
+class gRingFifo
+      ^
+2 errors generated.
+
+[2022-02-16 22:33:13]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/cpptest.cpp:11:15: error: use of undeclared identifier 'RingFifo'; did you mean 'gRingFifo'?
+ring_Fifo *RB=RingFifo();
+              ^
+./Core/Inc\ringfifo.h:43:7: note: 'gRingFifo' declared here
+class gRingFifo
+      ^
+1 error generated.
+
+[2022-02-16 22:34:21]	link failed !, exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x01a1e] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+Error: L6218E: Undefined symbol gRingFifo::~gRingFifo() (referred from cpptest.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 1 error messages.
+
+
+[2022-02-16 22:34:49]	[done]
+	build successfully !
+
+[2022-02-16 22:35:19]	[done]
+	build successfully !
+
+[2022-02-16 22:37:06]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/cpptest.cpp:12:11: error: no matching constructor for initialization of 'gRingFifo'
+gRingFifo fifotest(RB,256);
+          ^        ~~~~~~
+./Core/Inc\ringfifo.h:49:5: note: candidate constructor not viable: requires single argument 'size', but 2 arguments were provided
+    gRingFifo(uint32_t size){
+    ^
+./Core/Inc\ringfifo.h:43:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 2 were provided
+class gRingFifo
+      ^
+./Core/Inc\ringfifo.h:43:7: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 2 were provided
+1 error generated.
+
+[2022-02-16 22:37:39]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/cpptest.cpp:40:26: error: use of undeclared identifier 'RB'
+        if(Ring_Fifo_Get_Lenght(RB)!=0)
+                                ^
+./Core/Src/cpptest.cpp:44:42: error: use of undeclared identifier 'RB'
+    uint32_t length=Ring_Fifo_Get_Lenght(RB);
+                                         ^
+./Core/Src/cpptest.cpp:45:27: error: use of undeclared identifier 'RB'
+    Ring_Fifo_Read_String(RB,str,length);
+                          ^
+3 errors generated.
+
+[2022-02-16 22:38:17]	link failed !, exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x01a1e] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+Error: L6218E: Undefined symbol RB (referred from gDebug.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 1 error messages.
+
+
+[2022-02-16 22:38:55]	[done]
+	build successfully !
+
+[2022-02-16 22:39:49]	[done]
+	build successfully !
+
+[2022-02-16 22:40:07]	[done]
+	build successfully !
+
+[2022-02-16 22:52:37]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+In file included from ./Core/Src/cpptest.cpp:4:
+./Core/Inc\ringfifo.h:58:16: error: use of undeclared identifier 'fingFifoHandle'; did you mean 'ringFifoHandle'?
+        return fingFifoHandle;
+               ^~~~~~~~~~~~~~
+               ringFifoHandle
+./Core/Inc\ringfifo.h:49:16: note: 'ringFifoHandle' declared here
+    ring_Fifo *ringFifoHandle;
+               ^
+./Core/Src/cpptest.cpp:55:37: error: 'ringFifoHandle' is a private member of 'gRingFifo'
+                                if(Ring_Fifo_Get_Lenght(cdcFifo.ringFifoHandle)!=0)
+                                                                ^
+./Core/Inc\ringfifo.h:49:16: note: declared private here
+    ring_Fifo *ringFifoHandle;
+               ^
+./Core/Src/cpptest.cpp:59:50: error: 'ringFifoHandle' is a private member of 'gRingFifo'
+    uint32_t length=Ring_Fifo_Get_Lenght(cdcFifo.ringFifoHandle);
+                                                 ^
+./Core/Inc\ringfifo.h:49:16: note: declared private here
+    ring_Fifo *ringFifoHandle;
+               ^
+./Core/Src/cpptest.cpp:60:35: error: 'ringFifoHandle' is a private member of 'gRingFifo'
+    Ring_Fifo_Read_String(cdcFifo.ringFifoHandle,str,length);
+                                  ^
+./Core/Inc\ringfifo.h:49:16: note: declared private here
+    ring_Fifo *ringFifoHandle;
+               ^
+4 errors generated.
+
+[2022-02-16 22:53:28]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/cpptest.cpp:55:37: error: 'ringFifoHandle' is a private member of 'gRingFifo'
+                                if(Ring_Fifo_Get_Lenght(cdcFifo.ringFifoHandle)!=0)
+                                                                ^
+./Core/Inc\ringfifo.h:49:16: note: declared private here
+    ring_Fifo *ringFifoHandle;
+               ^
+./Core/Src/cpptest.cpp:59:50: error: 'ringFifoHandle' is a private member of 'gRingFifo'
+    uint32_t length=Ring_Fifo_Get_Lenght(cdcFifo.ringFifoHandle);
+                                                 ^
+./Core/Inc\ringfifo.h:49:16: note: declared private here
+    ring_Fifo *ringFifoHandle;
+               ^
+./Core/Src/cpptest.cpp:60:35: error: 'ringFifoHandle' is a private member of 'gRingFifo'
+    Ring_Fifo_Read_String(cdcFifo.ringFifoHandle,str,length);
+                                  ^
+./Core/Inc\ringfifo.h:49:16: note: declared private here
+    ring_Fifo *ringFifoHandle;
+               ^
+3 errors generated.
+
+[2022-02-16 22:54:47]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/cpptest.cpp:55:8: error: no matching function for call to 'Ring_Fifo_Get_Lenght'
+                                if(Ring_Fifo_Get_Lenght(cdcFifo.getHandle()->lenght)!=0)
+                                   ^~~~~~~~~~~~~~~~~~~~
+./Core/Inc\ringfifo.h:39:10: note: candidate function not viable: no known conversion from 'std::uint32_t' (aka 'unsigned int') to 'ring_Fifo *' for 1st argument
+uint32_t Ring_Fifo_Get_Lenght(ring_Fifo *ring_Fifo_handle);//<BB><F1>ȡ<BB><BA><B3><E5><C7><F8><C0><EF><D2>Ѵ<A2><B4><E6><B5><C4><CA><FD><BE>ݳ<A4><B6><C8>
+         ^
+./Core/Src/cpptest.cpp:59:21: error: no matching function for call to 'Ring_Fifo_Get_Lenght'
+    uint32_t length=Ring_Fifo_Get_Lenght(cdcFifo.getHandle()->lenght);
+                    ^~~~~~~~~~~~~~~~~~~~
+./Core/Inc\ringfifo.h:39:10: note: candidate function not viable: no known conversion from 'std::uint32_t' (aka 'unsigned int') to 'ring_Fifo *' for 1st argument
+uint32_t Ring_Fifo_Get_Lenght(ring_Fifo *ring_Fifo_handle);//<BB><F1>ȡ<BB><BA><B3><E5><C7><F8><C0><EF><D2>Ѵ<A2><B4><E6><B5><C4><CA><FD><BE>ݳ<A4><B6><C8>
+         ^
+./Core/Src/cpptest.cpp:60:5: error: no matching function for call to 'Ring_Fifo_Read_String'
+    Ring_Fifo_Read_String(cdcFifo.getHandle()->lenght);
+    ^~~~~~~~~~~~~~~~~~~~~
+./Core/Inc\ringfifo.h:35:9: note: candidate function not viable: requires 3 arguments, but 1 was provided
+uint8_t Ring_Fifo_Read_String(ring_Fifo *ring_Fifo_handle, uint8_t *output_addr, uint32_t read_lenght);//<B4>ӻ<BA><B3><E5><C7><F8><B6><C1>ȡָ<B6><A8><B3><A4><B6><C8><CA><FD><BE><DD>
+        ^
+3 errors generated.
+
+[2022-02-16 22:55:15]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/cpptest.cpp:60:5: error: no matching function for call to 'Ring_Fifo_Read_String'
+    Ring_Fifo_Read_String(cdcFifo.getHandle());
+    ^~~~~~~~~~~~~~~~~~~~~
+./Core/Inc\ringfifo.h:35:9: note: candidate function not viable: requires 3 arguments, but 1 was provided
+uint8_t Ring_Fifo_Read_String(ring_Fifo *ring_Fifo_handle, uint8_t *output_addr, uint32_t read_lenght);//<B4>ӻ<BA><B3><E5><C7><F8><B6><C1>ȡָ<B6><A8><B3><A4><B6><C8><CA><FD><BE><DD>
+        ^
+1 error generated.
+
+[2022-02-16 22:55:40]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\gDebug.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/gDebug.cpp:28:34: error: 'ringFifoHandle' is a private member of 'gRingFifo'
+  Ring_Fifo_Write_String(cdcFifo.ringFifoHandle,(uint8_t*)str,num);
+                                 ^
+./Core/Inc\ringfifo.h:49:16: note: declared private here
+    ring_Fifo *ringFifoHandle;
+               ^
+1 error generated.
+
+[2022-02-16 22:55:55]	[done]
+	build successfully !
+
+[2022-02-16 22:58:13]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+In file included from ./Core/Src/cpptest.cpp:4:
+./Core/Inc\ringfifo.h:67:5: error: expected member name or ';' after declaration specifiers
+    {
+    ^
+1 error generated.
+
+[2022-02-16 22:58:33]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+In file included from ./Core/Src/cpptest.cpp:4:
+./Core/Inc\ringfifo.h:68:9: error: cannot delete expression of type 'std::uint32_t' (aka 'unsigned int')
+        delete num;
+        ^      ~~~
+1 error generated.
+
+[2022-02-16 22:59:53]	[done]
+	build successfully !
+
+[2022-02-16 23:17:30]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+In file included from ./Core/Src/cpptest.cpp:4:
+./Core/Inc\ringfifo.h:99:13: error: expected member name or ';' after declaration specifiers
+    uint8_t delete(uint32_t delete_num){
+    ~~~~~~~ ^
+1 error generated.
+
+[2022-02-16 23:18:04]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+In file included from ./Core/Src/cpptest.cpp:4:
+./Core/Inc\ringfifo.h:73:5: error: non-void function does not return a value [-Werror,-Wreturn-type]
+    }
+    ^
+./Core/Inc\ringfifo.h:77:5: error: non-void function does not return a value [-Werror,-Wreturn-type]
+    }
+    ^
+./Core/Inc\ringfifo.h:81:5: error: non-void function does not return a value [-Werror,-Wreturn-type]
+    }
+    ^
+3 errors generated.
+
+[2022-02-16 23:20:45]	[done]
+	build successfully !
+
+[2022-02-16 23:22:59]	[done]
+	build successfully !
+
+[2022-02-16 23:25:43]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/cpptest.cpp:61:13: error: expected ';' after expression
+    cdcUsedN
+            ^
+            ;
+./Core/Src/cpptest.cpp:61:5: warning: expression result unused [-Wunused-value]
+    cdcUsedN
+    ^~~~~~~~
+./Core/Src/cpptest.cpp:62:25: error: use of undeclared identifier 'length'
+    CDC_Transmit_FS(str,length);
+                        ^
+1 warning and 2 errors generated.
+
+[2022-02-16 23:26:56]	[done]
+	build successfully !
+
+[2022-02-16 23:28:51]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\gDebug.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/gDebug.cpp:29:11: error: no matching member function for call to 'push'
+  cdcFifo.push(str,num);
+  ~~~~~~~~^~~~
+./Core/Inc\ringfifo.h:87:13: note: candidate function not viable: no known conversion from 'const char *' to 'std::uint8_t *' (aka 'unsigned char *') for 1st argument
+    uint8_t push(uint8_t *address,uint32_t num){
+            ^
+./Core/Inc\ringfifo.h:91:13: note: candidate function not viable: 1st argument ('const char *') would lose const qualifier
+    uint8_t push(char *address,uint32_t num){
+            ^
+./Core/Inc\ringfifo.h:79:13: note: candidate function not viable: requires single argument 'data', but 2 arguments were provided
+    uint8_t push(uint8_t data){
+            ^
+1 error generated.
+
+[2022-02-16 23:30:03]	[done]
+	build successfully !
+
+[2022-02-16 23:32:52]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/cpptest.cpp:59:17: error: variable-sized object may not be initialized
+    uint8_t str[(const uint32_t)cdcUsedN]={0};
+                ^~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+
+[2022-02-16 23:33:44]	[done]
+	build successfully !
+
+[2022-02-16 23:34:47]	[done]
+	build successfully !
+
+[2022-02-16 23:36:09]	[done]
+	build successfully !
+
+[2022-02-16 23:36:15]	[done]
+	build successfully !
+
+[2022-02-16 23:36:31]	[done]
+	build successfully !
+
+[2022-02-16 23:46:27]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/cpptest.cpp:59:23: error: use of overloaded operator '<<' is ambiguous (with operand types 'gxtCout' and 'std::uint32_t' (aka 'unsigned int'))
+    gDebug()<<"length"<<cdcLength<<endl;
+    ~~~~~~~~~~~~~~~~~~^ ~~~~~~~~~
+./Core/Inc\gDebug.h:27:14: note: candidate function
+    gxtCout &operator<<(char c)
+             ^
+./Core/Inc\gDebug.h:37:14: note: candidate function
+    gxtCout &operator<<(short number)
+             ^
+./Core/Inc\gDebug.h:42:14: note: candidate function
+    gxtCout &operator<<(int number)
+             ^
+./Core/Inc\gDebug.h:47:14: note: candidate function
+    gxtCout &operator<<(uint8_t number)
+             ^
+./Core/Inc\gDebug.h:62:14: note: candidate function
+    gxtCout &operator<<(long number)
+             ^
+./Core/Inc\gDebug.h:67:14: note: candidate function
+    gxtCout &operator<<(float number)
+             ^
+1 error generated.
+
+[2022-02-16 23:47:27]	[done]
+	build successfully !
+
+[2022-02-16 23:50:15]	[done]
+	build successfully !
+
+[2022-02-16 23:55:03]	[done]
+	build successfully !
+
+[2022-02-17 00:01:49]	[done]
+	build successfully !
+
+[2022-02-17 00:02:22]	[done]
+	build successfully !
+
+[2022-02-17 00:05:46]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+In file included from ./Core/Src/cpptest.cpp:2:
+./Core/Inc\gDebug.h:50:14: error: class member cannot be redeclared
+    gxtCout &operator<<(int16_t number){
+             ^
+./Core/Inc\gDebug.h:34:14: note: previous definition is here
+    gxtCout &operator<<(short number){
+             ^
+1 error generated.
+
+[2022-02-17 00:06:04]	[done]
+	build successfully !
+
+[2022-02-17 00:07:07]	[done]
+	build successfully !
+
+[2022-02-17 00:11:28]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/cpptest.cpp:44:5: error: use of undeclared identifier 'CDC_Transmit_FS'
+    CDC_Transmit_FS(str,cdcLength);
+    ^
+1 error generated.
+
+[2022-02-17 00:12:21]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\gDebug.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+In file included from ./Core/Src/gDebug.cpp:1:
+./Core/Inc\gDebug.h:40:25: error: unknown type name 'uint32_t'
+    gxtCout &operator<<(uint32_t number){
+                        ^
+./Core/Inc\gDebug.h:44:25: error: unknown type name 'uint16_t'
+    gxtCout &operator<<(uint16_t number){
+                        ^
+./Core/Inc\gDebug.h:48:25: error: unknown type name 'uint8_t'
+    gxtCout &operator<<(uint8_t number){
+                        ^
+./Core/Inc\gDebug.h:52:25: error: unknown type name 'uint8_t'
+    gxtCout &operator<<(uint8_t *string)
+                        ^
+./Core/Src/gDebug.cpp:41:5: error: use of undeclared identifier 'vsprintf'
+    vsprintf((char *)gDebugBuf, fmt, ap);
+    ^
+5 errors generated.
+
+[2022-02-17 00:12:37]	[done]
+	build successfully !
+
+[2022-02-17 00:16:16]	[done]
+	build successfully !
+
+[2022-02-17 00:17:25]	[done]
+	build successfully !
+
+[2022-02-17 02:35:53]	[done]
+	build successfully !
+
+[2022-02-17 02:38:10]	[done]
+	build successfully !
+
+[2022-02-17 02:38:22]	[done]
+	build successfully !
+
+[2022-02-17 02:47:29]	[done]
+	build successfully !
+
+[2022-02-17 02:50:12]	[done]
+	build successfully !
+
+[2022-02-17 02:50:55]	[done]
+	build successfully !
+
+[2022-02-17 02:52:58]	[done]
+	build successfully !
+
+[2022-02-17 02:53:30]	[done]
+	build successfully !
+
+[2022-02-17 02:53:48]	[done]
+	build successfully !
+
+[2022-02-17 03:00:51]	[done]
+	build successfully !
+
+[2022-02-17 03:02:10]	[done]
+	build successfully !
+
+[2022-02-17 03:02:43]	[done]
+	build successfully !
+
+[2022-02-17 03:19:18]	[done]
+	build successfully !
+
+[2022-02-17 03:24:54]	[done]
+	build successfully !
+
+[2022-02-17 03:25:38]	[done]
+	build successfully !
+
+[2022-02-17 03:27:09]	[done]
+	build successfully !
+
+[2022-02-17 03:30:02]	[done]
+	build successfully !
+
+[2022-02-17 03:31:37]	[done]
+	build successfully !
+
+[2022-02-17 03:37:12]	[done]
+	build successfully !
+
+[2022-02-17 03:40:06]	[done]
+	build successfully !
+
+[2022-02-17 03:41:21]	[done]
+	build successfully !
+
+[2022-02-17 03:42:20]	[done]
+	build successfully !
+
+[2022-02-17 03:43:42]	[done]
+	build successfully !
+
+[2022-02-17 16:20:40]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+In file included from ./Core/Src/cpptest.cpp:3:
+./Core/Inc\gxt_kt_gpio.h:28:1: error: expected class name
+{
+^
+1 error generated.
+
+[2022-02-17 16:20:53]	[done]
+	build successfully !
+
+[2022-02-17 16:58:57]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+In file included from ./Core/Src/cpptest.cpp:3:
+./Core/Inc\gxt_kt_gpio.h:28:1: error: expected unqualified-id
+{
+^
+./Core/Inc\gxt_kt_gpio.h:38:2: error: C++ requires a type specifier for all declarations
+}col;
+ ^
+2 errors generated.
+
+[2022-02-17 17:01:54]	[done]
+	build successfully !
+
+[2022-02-17 17:02:09]	[done]
+	build successfully !
+
+[2022-02-17 17:02:32]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+In file included from ./Core/Src/cpptest.cpp:3:
+./Core/Inc\gxt_kt_gpio.h:30:26: error: cannot initialize an array element of type 'bool *' with an rvalue of type 'int'
+    bool* gxtBLACK[3]={0,1,0};
+                         ^
+1 error generated.
+
+[2022-02-17 17:02:48]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+In file included from ./Core/Src/cpptest.cpp:3:
+./Core/Inc\gxt_kt_gpio.h:30:29: error: cannot initialize an array element of type 'std::uint8_t *' (aka 'unsigned char *') with an rvalue of type 'int'
+    uint8_t* gxtBLACK[3]={0,1,0};
+                            ^
+1 error generated.
+
+[2022-02-17 17:03:02]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+In file included from ./Core/Src/cpptest.cpp:3:
+./Core/Inc\gxt_kt_gpio.h:30:25: error: cannot initialize an array element of type 'int *' with an rvalue of type 'int'
+    int* gxtBLACK[3]={0,1,0};
+                        ^
+1 error generated.
+
+[2022-02-17 17:03:13]	[done]
+	build successfully !
+
+[2022-02-17 17:09:19]	link failed !, exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x01a1e] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+Error: L6123E: Linking globals named '_ZN3GXT5blackE': symbol multiply defined!
+Error: L6134E: LTO module created from LLVM bitcode in gxt_kt_gpio.o(.llvmbc) could not be added to the codegen.
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 2 error messages.
+
+
+[2022-02-17 17:09:58]	link failed !, exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x01a1e] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+Error: L6123E: Linking globals named '_ZN3GXT6gblackE': symbol multiply defined!
+Error: L6134E: LTO module created from LLVM bitcode in gxt_kt_gpio.o(.llvmbc) could not be added to the codegen.
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 2 error messages.
+
+
+[2022-02-17 17:10:12]	link failed !, exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x01a1e] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+Error: L6123E: Linking globals named '_ZN3LED5blackE': symbol multiply defined!
+Error: L6134E: LTO module created from LLVM bitcode in gxt_kt_gpio.o(.llvmbc) could not be added to the codegen.
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 2 error messages.
+
+
+[2022-02-17 17:13:25]	[done]
+	build successfully !
+
+[2022-02-17 17:13:34]	link failed !, exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x01a1e] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+Error: L6123E: Linking globals named '_ZN3LED1aE': symbol multiply defined!
+Error: L6134E: LTO module created from LLVM bitcode in gxt_kt_gpio.o(.llvmbc) could not be added to the codegen.
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 2 error messages.
+
+
+[2022-02-17 17:15:43]	link failed !, exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x01a1e] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+Error: L6123E: Linking globals named '_ZN3LED1aE': symbol multiply defined!
+Error: L6134E: LTO module created from LLVM bitcode in gxt_kt_gpio.o(.llvmbc) could not be added to the codegen.
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 2 error messages.
+
+
+[2022-02-17 17:15:49]	link failed !, exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x01a1e] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+Error: L6123E: Linking globals named '_ZN3LED1aE': symbol multiply defined!
+Error: L6134E: LTO module created from LLVM bitcode in gxt_kt_gpio.o(.llvmbc) could not be added to the codegen.
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 2 error messages.
+
+
+[2022-02-17 17:16:19]	[done]
+	build successfully !
+
+[2022-02-17 17:18:09]	[done]
+	build successfully !
+
+[2022-02-17 17:24:54]	[done]
+	build successfully !
+
+[2022-02-17 17:36:24]	[done]
+	build successfully !
+
+[2022-02-19 19:55:08]	compilation failed at : "f:\Stm32H7Sample\gxt_kt_Sample\USBCDC_Debug\Core\Src\cpptest.cpp", exit code: 1
+  at unify_builder.Program.Main (System.String[] args) [0x0187a] in <67d11e1b30504dd6babd321425698ba1>:0 
+---
+./Core/Src/cpptest.cpp:69:17: error: use of undeclared identifier 'gxtORANGE'
+        gSerialShowStr(gxtORANGE,"test%d",num++);
+                       ^
+1 error generated.
+
+[2022-02-19 19:55:45]	[done]
+	build successfully !
+
+[2022-02-19 19:58:09]	[done]
+	build successfully !
+
+[2022-02-19 19:58:42]	[done]
+	build successfully !
+

@@ -1,0 +1,23 @@
+{
+    "version": 3,
+    "beforeBuildTasks": [],
+    "afterBuildTasks": [],
+    "global": {
+        "output-debug-info": "enable"
+    },
+    "c/cpp-compiler": {
+        "optimization": "level-0",
+        "language-c": "c11",
+        "language-cpp": "c++14",
+        "link-time-optimization": true,
+        "use-rtti": true,
+        "warnings": "ac5-like-warnings"
+    },
+    "asm-compiler": {
+        "$use": "asm"
+    },
+    "linker": {
+        "output-format": "elf",
+        "misc-controls": "--diag_suppress=L6329"
+    }
+}
